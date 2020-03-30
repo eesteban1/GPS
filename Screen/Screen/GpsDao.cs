@@ -10,7 +10,7 @@ namespace Screen
     {
         public void Guardarposisicon(GPS gps )
         {
-            SqlConnection con = new SqlConnection("data source=198.71.226.6; initial catalog=facturaciondb;user id=us1;password=Ees2018$");
+            SqlConnection con = new SqlConnection("");
             con.Open();
             SqlCommand cmd = new SqlCommand("usp_InsertPosicion", con);
             cmd.Parameters.Add("@img", System.Data.SqlDbType.Binary);
