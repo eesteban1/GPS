@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Screen.Todo">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Label Text="Cooredenadas" />
+            <Label Text="Latitud y"></Label>
+            <Label x:Name="lat"></Label>
+            <Label Text="Longitud x"></Label>
+            <Label x:Name="lon"></Label>
+            <Label Text="Haltura h"></Label>
+            <Label x:Name="alt"></Label>
+                <Button x:Name="posicion" Text="Mostrar Ubicación" Clicked="Posicion_Clicked"></Button>
+            <!--<ImageButton x:Name="fotobotoon" Pressed="Fotobotoon_Pressed"></ImageButton>-->
+            <Image x:Name="MiImagen"></Image>
+            <Button Text="Tomar foto" x:Name="fotobotoon" Pressed="Fotobotoon_Pressed" Margin="20"></Button>
+                <Button Text="Grabar voz" x:Name="PlayStop" Clicked="PlayStop_Clicked" BackgroundColor="Blue"></Button>
+                <Button Text="Reproducir" x:Name="Reproducir" BackgroundColor="Blue" Clicked="Reproducir_Clicked"></Button>
+            <ListView x:Name="listarPhotos" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Image Source="{Binding Source}" Aspect="AspectFill" Margin="5">
+                            </Image>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
